@@ -5,14 +5,19 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
+import { MaterialModule } from '@angular/material';
+import { TweetListComponent } from './tweet-list/tweet-list.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TweetListComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    MaterialModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
