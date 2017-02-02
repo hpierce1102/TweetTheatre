@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 
 import { MaterialModule } from '@angular/material';
 import { TweetListComponent } from './tweet-list/tweet-list.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TweetListComponent
+    TweetListComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,

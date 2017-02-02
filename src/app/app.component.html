@@ -1,3 +1,40 @@
-<h1>
-  {{title}}
-</h1>
+<header>
+    <div class="center">
+        <a (click)="toggleConfig()">Edit</a>
+    </div>
+</header>
+
+<div class="center configContainer" *ngIf="showConfig">
+    <md-card>
+        <md-input-container class="full-width formRow">
+            <input md-input placeholder="Keyword" value="Google">
+        </md-input-container>
+
+        <!--The docs examples use tables for layouts. Neat.-->
+        <table class="full-width formRow" cellspacing="0"><tr>
+            <td>
+                <md-select placeholder="Interval" [(ngModel)]="interval" name="interval" class="full-width">
+                <md-option *ngFor="let interval of validIntervals" [value]="interval">
+                {{interval}}
+                </md-option>
+                </md-select>
+            </td>
+            <td>
+                <md-select placeholder="MaxTweets" [(ngModel)]="maxTweets" name="maxTweets" class="full-width">
+                    <md-option *ngFor="let option of validMaxTweets" [value]="maxTweets">
+                        {{option}}
+                    </md-option>
+                </md-select>
+            </td>
+        </tr></table>
+
+        <div class="full-width formRow">
+            <md-checkbox class="example-margin" [(ngModel)]="enableImages">Enable images</md-checkbox>
+        </div>
+
+        <div class="full-width formRow">
+            <button md-raised-button (click)="toggleConfig()" class="pull-right">Finish</button>
+            <div class="clearfix"></div>
+        </div>
+    </md-card>
+</div>

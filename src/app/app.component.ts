@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
+
+  interval = 60;
+  maxTweets = 4;
+  enableImages = true;
+
+  validIntervals = [ 30, 60, 90, 120];
+  validMaxTweets = [ 2, 4, 6];
+
+  showConfig = false;
+
+  toggleConfig(){
+    this.showConfig = !this.showConfig;
+  }
 }

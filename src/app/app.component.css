@@ -1,0 +1,39 @@
+header{
+    width:100%;
+    height:50px;
+    background-color:#4CAF50;
+    margin-bottom:20px;
+}
+
+.configContainer{
+    max-width:400px;
+}
+
+.half-width{
+    width:40%;
+    margin:0 1%;
+}
+
+.center{
+    margin:auto;
+}
+
+.cardContainer{
+
+}
+
+.full-width{
+    width:100%;
+}
+
+.formRow{
+    margin:5px 0;
+}
+
+.pull-right{
+    float:right;
+}
+
+.clearfix{
+    clear:both;
+}
