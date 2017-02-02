@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app works!';
 
+  keyword = '';
   interval = 60;
   maxTweets = 4;
   enableImages = true;

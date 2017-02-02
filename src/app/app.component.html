@@ -7,7 +7,7 @@
 <div class="center configContainer" *ngIf="showConfig">
     <md-card>
         <md-input-container class="full-width formRow">
-            <input md-input placeholder="Keyword" value="Google">
+            <input md-input placeholder="Keyword" [(ngModel)]="keyword" value="Google">
         </md-input-container>
 
         <!--The docs examples use tables for layouts. Neat.-->
