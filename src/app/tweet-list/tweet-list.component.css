@@ -1,0 +1,36 @@
+.container{
+    width:100%;
+    padding:10px;
+}
+
+app-tweet{
+    margin:10px .5%;
+    /*49% - the size of the margin*/
+    width:calc(49% - 10px);
+    float:left;
+}
+
+.clearfix{
+    clear:both;
+}
+
+@media (max-width: 600px) {
+    app-tweet{
+        margin:10px .5%;
+        width:calc(49% - 10px);
+        float:left;
+    }
+}
+
+@media (max-width: 500px) {
+    .container{
+        padding:0;
+    }
+
+    app-tweet{
+        margin:10px;
+        width:calc(100% - 20px);
+        float:left;
+    }
+}
+

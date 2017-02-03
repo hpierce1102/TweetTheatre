@@ -1,0 +1,61 @@
+md-card{
+    background-color:#F3F3F3;
+}
+
+.userContainer{
+    height:80px;
+}
+
+.profilePicContainer{
+    float:left;
+}
+
+.nameContainer{
+    margin-left:10px;
+}
+
+md-card-subtitle{
+    font-size:14px;
+}
+
+md-card-title{
+    font-size:20px;
+}
+
+.profilePic{
+    width:80px;
+}
+
+.clearfix{
+    clear:both;
+}
+
+.tweetImage{
+    width:100%;
+}
+
+.tweetText{
+    font-size:20px;
+}
+
+@media (max-width: 600px) {
+    .profilePic{
+        width:60px;
+    }
+
+    .userContainer{
+        height:60px;
+    }
+
+    md-card-subtitle{
+        font-size:11px;
+    }
+
+    md-card-title{
+        font-size:14px;
+    }
+
+    .tweetText{
+        font-size:14px;
+    }
+}
