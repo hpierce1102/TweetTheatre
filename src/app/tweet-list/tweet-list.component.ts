@@ -17,8 +17,8 @@ export class TweetListComponent implements OnInit {
   @Input() enableImages :boolean;
 
   tweets : Tweet[];
+
   ngOnInit() {
     this.tweets = ExampleTweets;
   }
-
 }
