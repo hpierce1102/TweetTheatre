@@ -12,8 +12,8 @@ export class TweetComponent implements OnInit {
   }
 
   @Input() tweet : Tweet;
+
   ngOnInit() {
-    console.log(this.tweet);
   }
 
 }
