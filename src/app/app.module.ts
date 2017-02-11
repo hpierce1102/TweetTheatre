@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { MaterialModule } from '@angular/material';
 import { TweetListComponent } from './tweet-list/tweet-list.component';
 import { TweetComponent } from './tweet/tweet.component';
+import {TweetFetcherService} from "./services/tweet-fetcher.service";
+
 
 @NgModule({
   declarations: [
@@ -21,7 +23,7 @@ import { TweetComponent } from './tweet/tweet.component';
     HttpModule,
     MaterialModule.forRoot()
   ],
-  providers: [],
+  providers: [ TweetFetcherService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
