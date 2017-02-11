@@ -39,4 +39,11 @@
     </md-card>
 </div>
 
-<app-tweet-list></app-tweet-list>
+<app-tweet-list
+    [keyword]="keyword"
+    [interval]="interval"
+    [maxTweets]="maxTweets"
+    [enableImages]="enableImages"
+></app-tweet-list>
+
+<button (click)="clicked()"></button>
