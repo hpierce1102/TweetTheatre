@@ -23,18 +23,31 @@ export class TweetListComponent implements OnInit, OnChanges {
     this.tweets = [];
   }
 
-
   tweets : Tweet[];
 
   ngOnInit() {
     this.getNewTweets();
-    this.fetchTweetsInterval = setInterval(this.getNewTweets.bind(this), this.interval * 1000);
+    this.startInterval();
   }
 
   ngOnChanges(changes: SimpleChanges){
-    if(changes.hasOwnProperty('interval')){
-      clearInterval(this.fetchTweetsInterval);
+    if(changes.hasOwnProperty('interval')) {
+      this.stopInterval();
+      this.startInterval();
+    }
+  }
+
+  stopInterval(){
+    clearInterval(this.fetchTweetsInterval);
+    this.fetchTweetsInterval = null;
+  }
+
+  startInterval(){
+    let intervalAlreadyRunning = this.fetchTweetsInterval != null;
+    if(!intervalAlreadyRunning){
       this.fetchTweetsInterval = setInterval(this.getNewTweets.bind(this), this.interval * 1000);
+    } else {
+      console.warn('Cannot start an interval while one is already running.');
     }
   }
 
