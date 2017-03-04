@@ -22,10 +22,10 @@ export class TweetFetcherService {
 
   fetch(keyword, maxTweets):Observable<Tweet[]>{
     let params: URLSearchParams = new URLSearchParams();
-    params.set('keyword', keyword);
+    params.set('query', keyword);
     params.set('maxTweets', maxTweets);
 
-    return this.http.get('http://127.0.0.1:3000/tweets')
+    return this.http.get('http://127.0.0.1:3000/tweets', { search : params })
         .map(this.handleResponse)
         .catch(this.handleError)
     ;

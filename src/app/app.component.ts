@@ -9,12 +9,12 @@ export class AppComponent {
   title = 'app works!';
 
   keyword = '';
-  interval = 60;
+  interval = 5;
   maxTweets = 4;
   enableImages = true;
 
-  validIntervals = [ 30, 60, 90, 120];
-  validMaxTweets = [ 2, 4, 6];
+  validIntervals = [ 5, 30, 60, 90, 120 ];
+  validMaxTweets = [ 2, 4, 6 ];
 
   showConfig = false;
 
